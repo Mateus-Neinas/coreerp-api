@@ -41,8 +41,4 @@ export function createApiServer() {
     }
     return send(res, 405, { error: "method_not_allowed" });
   });
-}
-if (process.env.NODE_ENV !== "test") {
-  const port = Number(process.env.PORT ?? 3000);
-  createApiServer().listen(port, () => console.log(`CoreERP API listening on :${port}`));
-}
+}\n
