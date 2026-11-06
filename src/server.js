@@ -41,4 +41,4 @@ export function createApiServer() {
     }
     return send(res, 405, { error: "method_not_allowed" });
   });
-}\n
+}
