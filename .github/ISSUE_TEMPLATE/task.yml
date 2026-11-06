@@ -1,0 +1,78 @@
+name: Tarefa de desenvolvimento
+description: Criar um cartão de trabalho para o pipeline Kanban do CoreERP
+title: "[TASK] "
+body:
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Coluna Kanban
+      description: Escolha o estágio inicial do cartão.
+      options:
+        - Backlog
+        - Pronto
+        - Em andamento
+        - Revisão
+        - CI
+        - Merge
+        - Concluído
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo
+      options:
+        - API
+        - Backend Java
+        - Frontend React
+        - Banco de dados
+        - Estoque
+        - Compras
+        - Financeiro
+        - Testes de API
+        - Cypress E2E
+        - DevOps / documentação
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objetivo
+      description: Qual resultado o usuário ou sistema precisa?
+      placeholder: Uma frase clara sobre a mudança.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      description: Liste resultados observáveis que definem conclusão.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: agents
+    attributes:
+      label: Coordenação e agentes
+      description: Registre o agente coordenador, implementador e subagentes/papéis necessários.
+      placeholder: |
+        Coordenador:
+        Implementador:
+        Subagentes (QA, DevOps, documentação ou domínio):
+        Revisor independente:
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências e riscos
+      description: Quais módulos, APIs, dados ou decisões podem bloquear esta tarefa?
+  - type: textarea
+    id: definition
+    attributes:
+      label: Plano de validação
+      description: Quais comandos, testes ou revisões demonstram que está pronto?
+    validations:
+      required: true
